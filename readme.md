@@ -1,165 +1,96 @@
 <div align="center">
 
-# Coding Interview Questions
+# LeetCode
 
-*A category-organized archive of data structure, algorithm, and system-design practice — solved in Python.*
+**Personal solutions, organized by topic.**
 
-`Python 3` · `Self-Study` · `Work in Progress`
+<br>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)
+![Categories](https://img.shields.io/badge/Categories-15-6E56CF?style=for-the-badge)
 
 </div>
 
+<br>
+
 ---
 
-## About
+<br>
 
-This repository holds solutions to coding interview problems, grouped by topic rather than by source or difficulty. The goal is a structure that mirrors how these problems actually get studied — one folder per concept, one file per problem — so revisiting a weak area later is a matter of opening a folder, not searching through history.
-
-## Structure
-
-```
-coding-interview-questions/
-├── data_structures/
-│   ├── arrays_and_strings/
-│   ├── linked_lists/
-│   ├── stacks_and_queues/
-│   ├── hash_tables/
-│   ├── trees/
-│   │   ├── binary_trees/
-│   │   ├── binary_search_trees/
-│   │   ├── tries/
-│   │   └── heaps/
-│   ├── graphs/
-│   │   ├── adjacency_list/
-│   │   └── adjacency_matrix/
-│   └── advanced/
-│       ├── union_find/
-│       ├── segment_trees/
-│       └── fenwick_trees/
-│
-├── algorithms/
-│   ├── sorting_and_searching/
-│   ├── recursion_and_backtracking/
-│   ├── dynamic_programming/
-│   │   ├── 1d_dp/
-│   │   ├── 2d_dp/
-│   │   └── knapsack_variants/
-│   ├── greedy/
-│   ├── divide_and_conquer/
-│   ├── graph_algorithms/
-│   │   ├── bfs_dfs/
-│   │   ├── shortest_path/
-│   │   ├── topological_sort/
-│   │   └── minimum_spanning_tree/
-│   └── bit_manipulation/
-│
-├── patterns/
-│   ├── two_pointers/
-│   ├── sliding_window/
-│   ├── fast_slow_pointers/
-│   ├── merge_intervals/
-│   ├── binary_search_variants/
-│   ├── matrix_traversal/
-│   └── prefix_sum/
-│
-├── system_design_adjacent/
-│   ├── object_oriented_design/
-│   ├── concurrency_and_multithreading/
-│   └── low_level_design/
-│
-├── distributed_systems/
-│   ├── consistency_and_availability/
-│   ├── caching_strategies/
-│   ├── load_balancing/
-│   ├── sharding_and_partitioning/
-│   ├── message_queues/
-│   └── rate_limiting/
-│
-├── frontend_specific/
-│   ├── dom_manipulation/
-│   ├── event_loop_and_async/
-│   ├── state_management/
-│   ├── rendering_and_reflow/
-│   └── component_design/
-│
-├── machine_learning/
-│   ├── feature_engineering/
-│   ├── model_evaluation_metrics/
-│   ├── data_preprocessing/
-│   ├── ml_system_design/
-│   └── classic_ml_coding/
-│
-├── testing/
-│   ├── unit_test_design/
-│   ├── edge_case_identification/
-│   ├── test_driven_development/
-│   └── mocking_and_stubbing/
-│
-├── math_and_logic/
-│   ├── number_theory/
-│   ├── combinatorics/
-│   └── probability/
-│
-└── other/
-    ├── string_manipulation/
-    ├── simulation/
-    └── sql_queries/
-```
+<div align="center">
 
 ## Categories
 
-| Domain | Focus | Subtopics |
-|---|---|---|
-| `data_structures` | Core structures and their operations | 13 |
-| `algorithms` | Classic algorithmic techniques | 13 |
-| `patterns` | Recurring problem-solving patterns | 7 |
-| `system_design_adjacent` | Design questions bordering on architecture | 3 |
-| `distributed_systems` | Concepts common in systems interviews | 6 |
-| `frontend_specific` | Browser, DOM, and UI-runtime questions | 5 |
-| `machine_learning` | ML fundamentals asked in coding rounds | 5 |
-| `testing` | Test design and reasoning | 4 |
-| `math_and_logic` | Number theory, combinatorics, probability | 3 |
-| `other` | Everything else worth practicing | 3 |
+<br>
 
-## Conventions
+[![Arrays](https://img.shields.io/badge/Arrays-1E293B?style=for-the-badge&labelColor=0F172A)](arrays/)
+[![Strings](https://img.shields.io/badge/Strings-1E293B?style=for-the-badge&labelColor=0F172A)](strings/)
+[![Linked Lists](https://img.shields.io/badge/Linked_Lists-1E293B?style=for-the-badge&labelColor=0F172A)](linked_lists/)
+[![Stacks](https://img.shields.io/badge/Stacks-1E293B?style=for-the-badge&labelColor=0F172A)](stacks/)
+[![Heaps](https://img.shields.io/badge/Heaps-1E293B?style=for-the-badge&labelColor=0F172A)](heaps/)
 
-Every problem lives in its own file, placed in the folder matching its primary topic. Each starts from the same minimal stub:
+[![Binary Trees](https://img.shields.io/badge/Binary_Trees-1E293B?style=for-the-badge&labelColor=0F172A)](binary_trees/)
+[![Binary Search Trees](https://img.shields.io/badge/Binary_Search_Trees-1E293B?style=for-the-badge&labelColor=0F172A)](binary_search_trees/)
+[![Tries](https://img.shields.io/badge/Tries-1E293B?style=for-the-badge&labelColor=0F172A)](tries/)
+[![Graphs](https://img.shields.io/badge/Graphs-1E293B?style=for-the-badge&labelColor=0F172A)](graphs/)
 
-```python
-"""
-Category: <topic>
+[![Searching](https://img.shields.io/badge/Searching-1E293B?style=for-the-badge&labelColor=0F172A)](searching/)
+[![Sorting](https://img.shields.io/badge/Sorting-1E293B?style=for-the-badge&labelColor=0F172A)](sorting/)
+[![Recursion](https://img.shields.io/badge/Recursion-1E293B?style=for-the-badge&labelColor=0F172A)](recursion/)
 
-Solution stub for a <topic> problem.
-"""
+[![Dynamic Programming](https://img.shields.io/badge/Dynamic_Programming-1E293B?style=for-the-badge&labelColor=0F172A)](dynamic_programming/)
+[![Greedy Algorithms](https://img.shields.io/badge/Greedy_Algorithms-1E293B?style=for-the-badge&labelColor=0F172A)](greedy_algorithms/)
+[![Famous Algorithms](https://img.shields.io/badge/Famous_Algorithms-1E293B?style=for-the-badge&labelColor=0F172A)](famous_algorithms/)
 
+</div>
 
-def solution(*args, **kwargs):
-    raise NotImplementedError
+<br>
 
+---
 
-if __name__ == "__main__":
-    pass
+<br>
+
+## Structure
+
+Each problem lives in its own folder under the matching category.
+
+```
+leetcode/
+└── <category>/
+    └── <number>_<problem_name>/
+        └── solution.py
 ```
 
-A few ground rules:
+<br>
 
-- **One problem, one file.** Named for the problem itself once it's filled in (e.g. `two_sum.py`), not left as a generic `solution.py`.
-- **Primary topic wins.** A problem that touches two categories goes wherever the *intended* technique lives — a DP problem solved with recursion still belongs under `dynamic_programming`.
-- **Runnable by default.** The `if __name__ == "__main__":` block is for quick manual checks, not a substitute for tests.
+**Example**
+
+```
+strings/3_longest_substring_without_repeating_characters/solution.py
+```
+
+<br>
+
+---
+
+<br>
 
 ## Usage
 
 ```bash
-git clone <repo-url>
-cd coding-interview-questions
-python data_structures/trees/binary_trees/<problem>.py
+cd <category>/<number>_<problem_name>
+python solution.py
 ```
 
-No external dependencies are required unless a specific problem calls for one, in which case it's noted at the top of that file.
+<br>
 
 ---
 
+<br>
+
 <div align="center">
 
-*Structure over volume. Depth over speed.*
+<sub>Data Structures &nbsp;·&nbsp; Algorithms &nbsp;·&nbsp; Problem Solving</sub>
 
 </div>
