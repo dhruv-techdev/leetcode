@@ -51,6 +51,22 @@
 
 <br>
 
+## Problems
+
+| # | Problem | Difficulty | Category | Solution |
+|:-:|:--------|:----------:|:---------|:--------:|
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | ![Easy](https://img.shields.io/badge/Easy-00B8A3) | Hash Tables | [Python](data_structures/hash_tables/1_Two_Sum.py) |
+| 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Strings | [Python](strings/3_longest_substring_without_repeating_characters/solution.py) |
+| 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | ![Hard](https://img.shields.io/badge/Hard-FF375F) | Arrays | [Python](arrays/4_Median_of_Two_Sorted_Arrays/solutions.py) |
+| 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Strings | [Python](strings/5_Longest_Palendromic_Substring/solution.py) |
+| 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Strings | [Python](strings/6_Zigzag_Conversion/solution.py) |
+
+<br>
+
+---
+
+<br>
+
 ## Structure
 
 Each problem lives in its own folder under the matching category.
