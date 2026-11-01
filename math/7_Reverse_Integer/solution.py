@@ -26,6 +26,42 @@ Constraints:
 -2^31 <= x <= 2^31 - 1
 """
 
+"""
+Approach: Pop and Push Digits
+
+Repeatedly pop the last digit off x and push it onto the end of result.
+The sign is handled separately: work with abs(x), then multiply the sign
+back at the end. (In Python, -123 % 10 = 7, not -3, so working with
+negative numbers directly would give wrong digits.)
+
+Math logic:
+
+    digit  = x % 10              -> last digit of x
+    x      = x // 10             -> drop the last digit from x
+    result = result * 10 + digit -> append digit to the end of result
+
+Overflow check (32-bit max is 2^31 - 1 = 2147483647):
+
+    result * 10 + digit overflows when result > 2147483647 // 10 = 214748364
+    So check result > 214748364 before multiplying.
+
+    The case result == 214748364 with digit > 7 can't happen: x would need
+    10 digits starting with 8 or 9, which is already bigger than 2^31.
+
+Walkthrough: x = 123
+
+x     digit = x % 10   result = result * 10 + digit   x = x // 10
+123        3                0 * 10 + 3 = 3                 12
+12         2                3 * 10 + 2 = 32                1
+1          1               32 * 10 + 1 = 321               0
+
+Answer = 321 * sign
+
+Trailing zeros disappear on their own: x = 120 -> result goes 0, 2, 21
+
+Complexity: Time O(log10 x) (one loop per digit, at most 10), Space O(1)
+"""
+
 class Solution(object):
     def reverse(self, x):
         """

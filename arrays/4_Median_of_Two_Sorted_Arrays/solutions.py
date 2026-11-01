@@ -34,6 +34,35 @@ nums2.length == n
 
 """
 
+"""
+Approach: Brute Force (Two Pointer Merge)
+
+Both arrays are already sorted, so walk through them with two pointers
+i and j, always taking the smaller value. This builds the fully sorted
+merged array, the same way the merge step of merge sort works.
+
+Math logic:
+
+Total length k = m + n
+
+For odd k:  median = merged[k // 2]
+For even k: median = ( merged[k // 2 - 1] + merged[k // 2] ) / 2
+
+Walkthrough:
+
+nums1 = [1,3], nums2 = [2]
+merged = [1,2,3], k = 3 (odd), k // 2 = 1
+median = merged[1] = 2
+
+nums1 = [1,2], nums2 = [3,4]
+merged = [1,2,3,4], k = 4 (even), k // 2 = 2
+median = ( merged[1] + merged[2] ) / 2 = (2 + 3) / 2 = 2.5
+
+Complexity: Time O(m + n), Space O(m + n)
+Note: the problem asks for O(log (m+n)), which needs binary search on the
+partition. This merge version is the simpler brute force.
+"""
+
 from typing import List
 
 class Solution:
@@ -80,21 +109,3 @@ if __name__ == "__main__":
         result = sol.findMedianSortedArrays(nums1, nums2)
         status = "PASS" if result == expected else "FAIL"
         print(f"Test {idx}: nums1={nums1}, nums2={nums2} -> got {result}, expected {expected} [{status}]")
-
-"""
-Input is 2 Sorted Arrays size m and n. We have to return the median of two sorted Arrays.
-
-Input: num1 = [1,3] and num2 = [2]
-output: 2.00000
-Explanation: Merged array = [1,2,3] and median is (2+3) / 2 = 2.
-
-Brute Force        
-Math logic: 
-
-For odd: median = merged[(m+n)//2]
-
-For Even: median = ( merged[(m+n)//2] + merged[(m+n)//2 - 1] ) / 2
-
-Replace the index with the value assigned
-
-"""

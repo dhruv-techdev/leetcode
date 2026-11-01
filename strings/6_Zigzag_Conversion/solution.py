@@ -41,6 +41,44 @@ s consists of English letters (lower-case and upper-case), ',' and '.'.
 1 <= numRows <= 1000
 """
 
+"""
+Approach: Simulate the Zigzag Row by Row
+
+Instead of drawing the 2D grid, keep one list per row and drop each
+character into the row it would land in. Reading the zigzag line by line
+is then just joining the rows top to bottom.
+
+Math logic:
+
+The row index moves down then up, bouncing between 0 and numRows - 1:
+    0, 1, 2, ..., numRows - 1, numRows - 2, ..., 1, 0, 1, 2, ...
+
+direction = +1 while going down, -1 while going up
+    At row 0           -> direction = +1
+    At row numRows - 1 -> direction = -1
+    current_row = current_row + direction
+
+The pattern repeats every 2 * (numRows - 1) characters.
+
+Edge cases:
+    numRows == 1        -> no zigzag, the string stays the same
+    numRows >= len(s)   -> every character gets its own row, so the
+                           string stays the same
+
+Walkthrough: s = "PAYPALISHIRING", numRows = 3
+
+char:  P A Y P A L I S H I R I N G
+row:   0 1 2 1 0 1 2 1 0 1 2 1 0 1
+
+Row 0: P A H N
+Row 1: A P L S I I G
+Row 2: Y I R
+
+Answer = "PAHN" + "APLSIIG" + "YIR" = "PAHNAPLSIIGYIR"
+
+Complexity: Time O(n), Space O(n)
+"""
+
 class Solution(object):
     def convert(self, s, numRows):
         """

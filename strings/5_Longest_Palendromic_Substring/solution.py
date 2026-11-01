@@ -22,6 +22,42 @@ Constraints:
 s consist of only digits and English letters.
 """
 
+"""
+Approach: Expand Around Center
+
+Every palindrome is a mirror around its center. For a string of length n
+there are 2n - 1 possible centers:
+    n centers on a character      -> odd length  palindromes, e.g. "aba"
+    n - 1 centers between two     -> even length palindromes, e.g. "abba"
+From each center, expand left and right while the characters match.
+
+Math logic:
+
+The while loop stops one step past the palindrome on both sides, so the
+palindrome is s[left + 1 .. right - 1]:
+    length = (right - 1) - (left + 1) + 1 = right - left - 1
+
+Given center i and palindrome length L, recover the bounds:
+    start = i - (L - 1) // 2
+    end   = i + L // 2
+
+    Odd  check: "aba",  i = 1, L = 3 -> start = 1 - 1 = 0, end = 1 + 1 = 2
+    Even check: "abba", i = 1, L = 4 -> start = 1 - 1 = 0, end = 1 + 2 = 3
+
+Answer = s[start : end + 1]
+
+Walkthrough: s = "cbbd"
+
+i = 1, even center between s[1] and s[2]:
+    s[1] = 'b' == s[2] = 'b'  -> expand to left = 0, right = 3
+    s[0] = 'c' != s[3] = 'd'  -> stop
+    L = 3 - 0 - 1 = 2
+    start = 1 - (2 - 1) // 2 = 1, end = 1 + 2 // 2 = 2
+    s[1 : 3] = "bb"
+
+Complexity: Time O(n^2) (n centers, each can expand up to n), Space O(1)
+"""
+
 class Solution(object):
     def longestPalindrome(self, s):
         """

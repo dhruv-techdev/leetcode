@@ -30,6 +30,41 @@ Constraints:
 s consists of English letters, digits, symbols and spaces.
 """
 
+"""
+Approach: Sliding Window + Hash Map
+
+Keep a window s[left..right] that never contains a repeated character.
+char_map remembers the last index where each character was seen.
+
+Math logic:
+
+Window length = right - left + 1
+
+When s[right] was last seen at index p:
+    If p >= left  -> the repeat is inside the window, so jump: left = p + 1
+    If p <  left  -> the old copy is already outside the window, ignore it
+                     (this is why "abba" needs the >= left check, otherwise
+                     left would move backwards)
+
+max_len = max(max_len, right - left + 1)
+
+Walkthrough: s = "abcabcbb"
+
+right  char  last seen  left  window   length
+  0     a       -        0    a          1
+  1     b       -        0    ab         2
+  2     c       -        0    abc        3
+  3     a       0        1    bca        3
+  4     b       1        2    cab        3
+  5     c       2        3    abc        3
+  6     b       4        5    cb         2
+  7     b       6        7    b          1
+
+Answer = 3
+
+Complexity: Time O(n) (each index visited once), Space O(k) where k = number of distinct characters
+"""
+
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
         char_map = {}
