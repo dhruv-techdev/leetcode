@@ -62,6 +62,7 @@
 | 5 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Strings | [Python](strings/5_Longest_Palendromic_Substring/solution.py) |
 | 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Strings | [Python](strings/6_Zigzag_Conversion/solution.py) |
 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Math | [Python](math/7_Reverse_Integer/solution.py) |
+| 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Strings | [Python](strings/8_String_to_Integer_atoi/solution.py) |
 
 <br>
 
