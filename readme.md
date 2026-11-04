@@ -63,6 +63,7 @@
 | 6 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Strings | [Python](strings/6_Zigzag_Conversion/solution.py) |
 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Math | [Python](math/7_Reverse_Integer/solution.py) |
 | 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | ![Medium](https://img.shields.io/badge/Medium-FFC01E) | Strings | [Python](strings/8_String_to_Integer_atoi/solution.py) |
+| 9 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | ![Easy](https://img.shields.io/badge/Easy-00B8A3) | Math | [Python](math/9_Palindrome_Number/solution.py) |
 
 <br>
 
